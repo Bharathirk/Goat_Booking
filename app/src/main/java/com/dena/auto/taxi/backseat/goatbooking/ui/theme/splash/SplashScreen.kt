@@ -1,4 +1,4 @@
-package com.dena.auto.taxi.backseat.goatbooking.ui.theme.flash
+package com.dena.auto.taxi.backseat.goatbooking.ui.theme.splash
 
 import android.view.animation.OvershootInterpolator
 import androidx.compose.animation.core.Animatable
@@ -18,7 +18,7 @@ import com.dena.auto.taxi.backseat.goatbooking.R
 import kotlinx.coroutines.delay
 
 @Composable
-fun FlashScreen(
+fun SplashScreen(
 navController: NavController
 ) {
     val scale = remember {
