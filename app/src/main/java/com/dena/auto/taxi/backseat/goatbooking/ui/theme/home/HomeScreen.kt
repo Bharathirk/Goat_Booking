@@ -42,26 +42,3 @@ fun HomeScreen(
         androidx.compose.material.Text(text = "Home screen")
     }
 }
-
-
-@Composable
-fun BookScreen(
-) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        androidx.compose.material.Text(text = "Book screen")
-    }
-}
-
-@Composable
-fun HistoryScreen(
-) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        androidx.compose.material.Text(text = "History screen")
-    }
-}

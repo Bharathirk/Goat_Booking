@@ -6,8 +6,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.dena.auto.taxi.backseat.goatbooking.ui.theme.MainScreen
-import com.dena.auto.taxi.backseat.goatbooking.ui.theme.home.BookScreen
-import com.dena.auto.taxi.backseat.goatbooking.ui.theme.home.HistoryScreen
+import com.dena.auto.taxi.backseat.goatbooking.ui.theme.book.BookScreen
+import com.dena.auto.taxi.backseat.goatbooking.ui.theme.history.HistoryScreen
 import com.dena.auto.taxi.backseat.goatbooking.ui.theme.home.HomeScreen
 import com.dena.auto.taxi.backseat.goatbooking.ui.theme.splash.SplashScreen
 
