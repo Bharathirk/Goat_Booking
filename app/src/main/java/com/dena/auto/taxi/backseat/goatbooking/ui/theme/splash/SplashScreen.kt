@@ -35,7 +35,7 @@ navController: NavController
             )
         )
         delay(3000L)
-        navController.navigate("home_screen")
+        navController.navigate("Main_screen")
     }
 Box(
     contentAlignment = Alignment.Center,
