@@ -1,6 +1,4 @@
 package com.dena.auto.taxi.backseat.goatbooking.ui.theme.bottom_bar
-
-import android.graphics.Color
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material3.*
@@ -37,6 +35,7 @@ fun BottomNavigationBar(
             BottomNavigationItem(
                 selected = selected,
                 onClick = {
+                    selectedItemIndex=item.navPosition
                     onItemClick(item)
                 },
                 label = {

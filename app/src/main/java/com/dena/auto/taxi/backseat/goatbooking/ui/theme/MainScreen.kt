@@ -30,14 +30,16 @@ fun MainScreen() {
                         title = "Home",
                         selectedIcon = Icons.Filled.Home,
                         unselectedIcon = Icons.Outlined.Home,
-                        hasNews = false
+                        hasNews = false,
+                        navPosition = 0
                     ),
                     BottomNavItem(
                         route = "book_screen",
                         title = "Book",
                         selectedIcon = Icons.Filled.DateRange,
                         unselectedIcon = Icons.Outlined.DateRange,
-                        hasNews = true
+                        hasNews = true,
+                        navPosition = 1
                     ),
                     BottomNavItem(
                         route = "history_screen",
@@ -45,7 +47,8 @@ fun MainScreen() {
                         selectedIcon = Icons.Filled.ShoppingCart,
                         unselectedIcon = Icons.Outlined.ShoppingCart,
                         hasNews = false,
-                        badgeCount = 40
+                        badgeCount = 40,
+                        navPosition = 2
                     ),
                 ) , navController = navController,
                 onItemClick = {

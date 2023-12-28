@@ -8,5 +8,6 @@ data class BottomNavItem(
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector,
     val hasNews: Boolean,
-    val badgeCount: Int? = null
+    val badgeCount: Int? = null,
+    val navPosition: Int
 )
