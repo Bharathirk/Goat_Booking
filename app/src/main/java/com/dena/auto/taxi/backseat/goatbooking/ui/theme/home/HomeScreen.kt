@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.hilt.navigation.compose.hiltViewModel
 
 data class BottomNavigationItem(
+    val route:String,
     val title:String,
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector,
@@ -34,68 +35,10 @@ data class BottomNavigationItem(
 @Composable
 fun HomeScreen(
 ) {
-    val items = listOf(
-        BottomNavigationItem(
-            title = "Home",
-            selectedIcon = Icons.Filled.Home,
-            unselectedIcon = Icons.Outlined.Home,
-            hasNews = false
-        ),
-        BottomNavigationItem(
-            title = "Book",
-            selectedIcon = Icons.Filled.DateRange,
-            unselectedIcon = Icons.Outlined.DateRange,
-            hasNews = true
-        ),
-        BottomNavigationItem(
-            title = "History",
-            selectedIcon = Icons.Filled.ShoppingCart,
-            unselectedIcon = Icons.Outlined.ShoppingCart,
-            hasNews = false,
-            badgeCount = 40
-        ),
-    )
-    var selectedItemIndex by rememberSaveable {
-        mutableStateOf(0)
-    }
-    Scaffold(
-        bottomBar = {
-            NavigationBar {
-                items.forEachIndexed { index, item ->
-                    NavigationBarItem(
-                        selected = selectedItemIndex == index,
-                        onClick = {
-                                  selectedItemIndex = index
-                                  },
-                        label = {
-                                Text(text = item.title)
-                        },
-                        icon = {
-                            BadgedBox(
-                                badge ={
-                                    if (item.badgeCount != null) {
-                                        Badge {
-                                            Text(text = item.badgeCount.toString())
-                                        }
-                                    } else if (item.hasNews) {
-                                        Badge()
-                                    }
-                                }) {
-                                Icon(
-                                    imageVector = if (index == selectedItemIndex) {
-                                        item.selectedIcon
-                                    } else item.unselectedIcon,
-                                    contentDescription = item.title)
-                            }
-                        }
-                    )
-                }
-            }
-        }
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
     ) {
-
-    }
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(text = "MAIN_SCREEN", color = Color.Black)
+        androidx.compose.material.Text(text = "Home screen")
     }
 }
